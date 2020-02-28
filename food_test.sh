@@ -59,7 +59,7 @@ cd "${CURRENT_DIR}"
 UNI_DATASET="${WORK_DIR}/${DATASET_DIR}/${UNI_FOLDER}/tfrecord"
 
 # Train 10 iterations.
-NUM_ITERATIONS=1000
+NUM_ITERATIONS=20
 python "${WORK_DIR}"/train.py \
   --logtostderr \
   --train_split="train" \
