@@ -109,7 +109,7 @@ def add_softmax_cross_entropy_loss_for_each_scale(scales_to_logits,
           align_corners=True)
 
     scaled_labels = tf.reshape(scaled_labels, shape=[-1])
-    unimib_weights = [1, 10, 10, 10, 10, 10, 10, 10]
+    unimib_weights = [0.96, 55, 128, 139, 123, 168, 279, 350]
     weights = utils.get_label_weight_mask(
         scaled_labels, ignore_label, num_classes, label_weights=unimib_weights)
     # Dimension of keep_mask is equal to the total number of pixels.
